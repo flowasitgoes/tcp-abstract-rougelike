@@ -113,6 +113,7 @@ html, body {
   gap: 0;
   width: 100%;
   max-width: 480px;
+  margin-bottom: 36px;
 }
 
 /* 對話框上方的 NPC 場景圖（如冰島旅人） */
