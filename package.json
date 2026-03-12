@@ -1,13 +1,12 @@
 {
   "name": "tpc-small-game-2",
   "version": "1.0.0",
-  "description": "玩家在凌晨 2 點的台灣夜市中左右移動，點擊場景中的旅人與物件觸發對話，最後到鹹酥雞攤買到一袋鹹酥雞，結尾呈現「大家理解並喜歡上台灣夜市文化」。",
-  "main": "index.js",
+  "description": "玩家在凌晨 2 點的台灣夜市中左右移動，與10國旅人（冰島、蒙古、不丹、馬達加斯加、巴拉圭、斯洛維尼亞、納米比亞、阿爾巴尼亞、格陵蘭、玻利維亞）及攤主、物件互動觸發對話，最後到鹹酥雞攤買到一袋鹹酥雞，結尾呈現「大家理解並喜歡上台灣夜市文化」。",
+  "keywords": ["10國旅人", "夜市鹹酥雞", "台灣夜市", "小遊戲", "Night Market", "Fried Chicken", "Taiwan"],
   "scripts": {
     "start": "serve -p 3333 .",
     "build": "./build-www.sh"
   },
-  "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs"

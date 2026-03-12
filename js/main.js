@@ -223,7 +223,7 @@
     const langBtn = el("lang-switch");
     if (langBtn && ui.langButton != null) langBtn.textContent = ui.langButton;
     document.documentElement.lang = Lang.getLang() === "en" ? "en" : "zh-TW";
-    document.title = Lang.getLang() === "en" ? "Night Market Fried Chicken · 夜市鹹酥雞｜台灣夜市文化小遊戲" : "夜市鹹酥雞 · Night Market Fried Chicken｜台灣夜市文化小遊戲";
+    document.title = Lang.getLang() === "en" ? "Night Market Fried Chicken · 夜市鹹酥雞｜10國旅人台灣夜市文化小遊戲" : "夜市鹹酥雞 · Night Market Fried Chicken｜10國旅人台灣夜市文化小遊戲";
   }
 
   function init() {
