@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <title>夜市鹹酥雞 · Night Market Fried Chicken</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="game-wrap">
+    <canvas id="game-canvas"></canvas>
+
+    <!-- 對話框 -->
+    <div id="dialog-overlay" class="hidden">
+      <div id="dialog-content" class="dialog-content">
+        <div id="dialog-scene-wrap" class="dialog-scene-wrap hidden">
+          <canvas id="dialog-scene" width="480" height="270"></canvas>
+        </div>
+        <div id="dialog-box">
+        <div id="dialog-title"></div>
+        <div id="dialog-text"></div>
+        <button id="dialog-next" type="button">下一句</button>
+        <button id="dialog-close" type="button" class="hidden">關閉</button>
+      </div>
+      </div>
+    </div>
+
+    <!-- 結尾畫面 -->
+    <div id="ending-overlay" class="hidden">
+      <div id="ending-box">
+        <h2>大家理解並喜歡上台灣夜市文化</h2>
+        <p>凌晨兩點，鹹酥雞與九層塔的香味，讓來自世界各地的旅人都有了共同的記憶。</p>
+        <button id="ending-replay" type="button">再玩一次</button>
+      </div>
+    </div>
+
+    <!-- 觸控虛擬按鈕 -->
+    <div id="touch-controls" class="touch-controls">
+      <button id="btn-left" type="button" aria-label="向左">←</button>
+      <button id="btn-right" type="button" aria-label="向右">→</button>
+    </div>
+  </div>
+
+  <script src="js/constants.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="js/iceland-scene.js"></script>
+  <script src="js/dialogues.js"></script>
+  <script src="js/scene.js"></script>
+  <script src="js/player.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
