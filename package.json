@@ -4,7 +4,8 @@
   "description": "玩家在凌晨 2 點的台灣夜市中左右移動，點擊場景中的旅人與物件觸發對話，最後到鹹酥雞攤買到一袋鹹酥雞，結尾呈現「大家理解並喜歡上台灣夜市文化」。",
   "main": "index.js",
   "scripts": {
-    "start": "serve -p 3333 ."
+    "start": "serve -p 3333 .",
+    "build": "./build-www.sh"
   },
   "keywords": [],
   "author": "",
