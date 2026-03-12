@@ -4,7 +4,7 @@
  */
 (function () {
   const STORAGE_KEY = "lang";
-  const defaultLang = "zh";
+  const defaultLang = "en";
 
   function getStored() {
     try {
