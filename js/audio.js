@@ -15,16 +15,16 @@ const AudioManager = (function () {
 
   function ensureLoaded() {
     if (!nextAudio) {
-      nextAudio = new Audio("public/sound/soundreality-pop-423717.mp3");
+      nextAudio = new Audio("/public/sound/soundreality-pop-423717.mp3");
     }
     if (!closeAudio) {
-      closeAudio = new Audio("public/sound/dragon-studio-pop-402323.mp3");
+      closeAudio = new Audio("/public/sound/dragon-studio-pop-402323.mp3");
     }
     if (!npcMeetAudio) {
-      npcMeetAudio = new Audio("public/sound/soundreality-battle-pop-424581.mp3");
+      npcMeetAudio = new Audio("/public/sound/soundreality-battle-pop-424581.mp3");
     }
     if (!walkLeftAudio) {
-      walkLeftAudio = new Audio("public/sound/walk-left.mp3");
+      walkLeftAudio = new Audio("/public/sound/walk-left.mp3");
       try {
         var ctx = new (window.AudioContext || window.webkitAudioContext)();
         var src = ctx.createMediaElementSource(walkLeftAudio);
@@ -35,13 +35,13 @@ const AudioManager = (function () {
       } catch (e) {}
     }
     if (!walkRightAudio) {
-      walkRightAudio = new Audio("public/sound/walk-right.mp3");
+      walkRightAudio = new Audio("/public/sound/walk-right.mp3");
     }
     if (!crowdCheerAudio) {
-      crowdCheerAudio = new Audio("public/sound/dennish18-crowd-cheering-143103.mp3");
+      crowdCheerAudio = new Audio("/public/sound/dennish18-crowd-cheering-143103.mp3");
     }
     if (!fireworkAudio) {
-      fireworkAudio = new Audio("public/sound/freesound_community-firework-show-short-64657.mp3");
+      fireworkAudio = new Audio("/public/sound/freesound_community-firework-show-short-64657.mp3");
     }
   }
 

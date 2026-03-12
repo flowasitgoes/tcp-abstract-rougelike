@@ -54,7 +54,7 @@
     }
   };
 
-  const path = "public/translations.json";
+  const path = "/public/translations.json";
   fetch(path)
     .then(function (res) {
       if (!res.ok) throw new Error("Failed to load " + path);
