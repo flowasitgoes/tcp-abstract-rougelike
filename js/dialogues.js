@@ -105,6 +105,8 @@ const Dialogues = (function () {
 
   function close() {
     if (typeof IcelandScene !== "undefined") IcelandScene.stop();
+    if (typeof MongoliaScene !== "undefined") MongoliaScene.stop();
+    if (typeof BhutanScene !== "undefined") BhutanScene.stop();
     if (sceneWrapEl) sceneWrapEl.classList.add("hidden");
     overlayEl.classList.add("hidden");
     nextBtn.classList.remove("hidden");
@@ -134,9 +136,23 @@ const Dialogues = (function () {
 
     if (id === "npc_iceland" && typeof IcelandScene !== "undefined" && sceneWrapEl && sceneCanvasEl) {
       sceneWrapEl.classList.remove("hidden");
+      if (typeof MongoliaScene !== "undefined") MongoliaScene.stop();
+      if (typeof BhutanScene !== "undefined") BhutanScene.stop();
       IcelandScene.start(sceneCanvasEl);
+    } else if (id === "npc_mongolia" && typeof MongoliaScene !== "undefined" && sceneWrapEl && sceneCanvasEl) {
+      sceneWrapEl.classList.remove("hidden");
+      if (typeof IcelandScene !== "undefined") IcelandScene.stop();
+      if (typeof BhutanScene !== "undefined") BhutanScene.stop();
+      MongoliaScene.start(sceneCanvasEl);
+    } else if (id === "npc_bhutan" && typeof BhutanScene !== "undefined" && sceneWrapEl && sceneCanvasEl) {
+      sceneWrapEl.classList.remove("hidden");
+      if (typeof IcelandScene !== "undefined") IcelandScene.stop();
+      if (typeof MongoliaScene !== "undefined") MongoliaScene.stop();
+      BhutanScene.start(sceneCanvasEl);
     } else {
       if (typeof IcelandScene !== "undefined") IcelandScene.stop();
+      if (typeof MongoliaScene !== "undefined") MongoliaScene.stop();
+      if (typeof BhutanScene !== "undefined") BhutanScene.stop();
       if (sceneWrapEl) sceneWrapEl.classList.add("hidden");
     }
   }
