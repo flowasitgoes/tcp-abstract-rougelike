@@ -115,6 +115,9 @@ const Dialogues = (function () {
     if (typeof BasilScene !== "undefined") BasilScene.stop();
     if (typeof GarlicScene !== "undefined") GarlicScene.stop();
     if (typeof GreenlandScene !== "undefined") GreenlandScene.stop();
+    if (typeof FoodBagScene !== "undefined") FoodBagScene.stop();
+    if (typeof BoliviaScene !== "undefined") BoliviaScene.stop();
+    if (typeof FriedChickenScene !== "undefined") FriedChickenScene.stop();
     if (sceneWrapEl) sceneWrapEl.classList.add("hidden");
     overlayEl.classList.add("hidden");
     nextBtn.classList.remove("hidden");
@@ -154,6 +157,9 @@ const Dialogues = (function () {
       if (typeof BasilScene !== "undefined") BasilScene.stop();
       if (typeof GarlicScene !== "undefined") GarlicScene.stop();
       if (typeof GreenlandScene !== "undefined") GreenlandScene.stop();
+      if (typeof FoodBagScene !== "undefined") FoodBagScene.stop();
+      if (typeof BoliviaScene !== "undefined") BoliviaScene.stop();
+      if (typeof FriedChickenScene !== "undefined") FriedChickenScene.stop();
       IcelandScene.start(sceneCanvasEl);
     } else if (id === "npc_mongolia" && typeof MongoliaScene !== "undefined" && sceneWrapEl && sceneCanvasEl) {
       sceneWrapEl.classList.remove("hidden");
@@ -167,6 +173,9 @@ const Dialogues = (function () {
       if (typeof BasilScene !== "undefined") BasilScene.stop();
       if (typeof GarlicScene !== "undefined") GarlicScene.stop();
       if (typeof GreenlandScene !== "undefined") GreenlandScene.stop();
+      if (typeof FoodBagScene !== "undefined") FoodBagScene.stop();
+      if (typeof BoliviaScene !== "undefined") BoliviaScene.stop();
+      if (typeof FriedChickenScene !== "undefined") FriedChickenScene.stop();
       MongoliaScene.start(sceneCanvasEl);
     } else if (id === "npc_bhutan" && typeof BhutanScene !== "undefined" && sceneWrapEl && sceneCanvasEl) {
       sceneWrapEl.classList.remove("hidden");
@@ -180,6 +189,9 @@ const Dialogues = (function () {
       if (typeof BasilScene !== "undefined") BasilScene.stop();
       if (typeof GarlicScene !== "undefined") GarlicScene.stop();
       if (typeof GreenlandScene !== "undefined") GreenlandScene.stop();
+      if (typeof FoodBagScene !== "undefined") FoodBagScene.stop();
+      if (typeof BoliviaScene !== "undefined") BoliviaScene.stop();
+      if (typeof FriedChickenScene !== "undefined") FriedChickenScene.stop();
       BhutanScene.start(sceneCanvasEl);
     } else if (id === "npc_madagascar" && typeof MadagascarScene !== "undefined" && sceneWrapEl && sceneCanvasEl) {
       sceneWrapEl.classList.remove("hidden");
@@ -193,6 +205,9 @@ const Dialogues = (function () {
       if (typeof BasilScene !== "undefined") BasilScene.stop();
       if (typeof GarlicScene !== "undefined") GarlicScene.stop();
       if (typeof GreenlandScene !== "undefined") GreenlandScene.stop();
+      if (typeof FoodBagScene !== "undefined") FoodBagScene.stop();
+      if (typeof BoliviaScene !== "undefined") BoliviaScene.stop();
+      if (typeof FriedChickenScene !== "undefined") FriedChickenScene.stop();
       MadagascarScene.start(sceneCanvasEl);
     } else if (id === "npc_paraguay" && typeof ParaguayScene !== "undefined" && sceneWrapEl && sceneCanvasEl) {
       sceneWrapEl.classList.remove("hidden");
@@ -206,6 +221,9 @@ const Dialogues = (function () {
       if (typeof BasilScene !== "undefined") BasilScene.stop();
       if (typeof GarlicScene !== "undefined") GarlicScene.stop();
       if (typeof GreenlandScene !== "undefined") GreenlandScene.stop();
+      if (typeof FoodBagScene !== "undefined") FoodBagScene.stop();
+      if (typeof BoliviaScene !== "undefined") BoliviaScene.stop();
+      if (typeof FriedChickenScene !== "undefined") FriedChickenScene.stop();
       ParaguayScene.start(sceneCanvasEl);
     } else if (id === "npc_slovenia" && typeof SloveniaScene !== "undefined" && sceneWrapEl && sceneCanvasEl) {
       sceneWrapEl.classList.remove("hidden");
@@ -219,6 +237,9 @@ const Dialogues = (function () {
       if (typeof BasilScene !== "undefined") BasilScene.stop();
       if (typeof GarlicScene !== "undefined") GarlicScene.stop();
       if (typeof GreenlandScene !== "undefined") GreenlandScene.stop();
+      if (typeof FoodBagScene !== "undefined") FoodBagScene.stop();
+      if (typeof BoliviaScene !== "undefined") BoliviaScene.stop();
+      if (typeof FriedChickenScene !== "undefined") FriedChickenScene.stop();
       SloveniaScene.start(sceneCanvasEl);
     } else if (id === "npc_namibia" && typeof NamibiaScene !== "undefined" && sceneWrapEl && sceneCanvasEl) {
       sceneWrapEl.classList.remove("hidden");
@@ -232,6 +253,9 @@ const Dialogues = (function () {
       if (typeof BasilScene !== "undefined") BasilScene.stop();
       if (typeof GarlicScene !== "undefined") GarlicScene.stop();
       if (typeof GreenlandScene !== "undefined") GreenlandScene.stop();
+      if (typeof FoodBagScene !== "undefined") FoodBagScene.stop();
+      if (typeof BoliviaScene !== "undefined") BoliviaScene.stop();
+      if (typeof FriedChickenScene !== "undefined") FriedChickenScene.stop();
       NamibiaScene.start(sceneCanvasEl);
     } else if (id === "npc_albania" && typeof AlbaniaScene !== "undefined" && sceneWrapEl && sceneCanvasEl) {
       sceneWrapEl.classList.remove("hidden");
@@ -245,6 +269,9 @@ const Dialogues = (function () {
       if (typeof BasilScene !== "undefined") BasilScene.stop();
       if (typeof GarlicScene !== "undefined") GarlicScene.stop();
       if (typeof GreenlandScene !== "undefined") GreenlandScene.stop();
+      if (typeof FoodBagScene !== "undefined") FoodBagScene.stop();
+      if (typeof BoliviaScene !== "undefined") BoliviaScene.stop();
+      if (typeof FriedChickenScene !== "undefined") FriedChickenScene.stop();
       AlbaniaScene.start(sceneCanvasEl);
     } else if (id === "npc_greenland" && typeof GreenlandScene !== "undefined" && sceneWrapEl && sceneCanvasEl) {
       sceneWrapEl.classList.remove("hidden");
@@ -258,7 +285,25 @@ const Dialogues = (function () {
       if (typeof AlbaniaScene !== "undefined") AlbaniaScene.stop();
       if (typeof BasilScene !== "undefined") BasilScene.stop();
       if (typeof GarlicScene !== "undefined") GarlicScene.stop();
+      if (typeof FoodBagScene !== "undefined") FoodBagScene.stop();
+      if (typeof BoliviaScene !== "undefined") BoliviaScene.stop();
+      if (typeof FriedChickenScene !== "undefined") FriedChickenScene.stop();
       GreenlandScene.start(sceneCanvasEl);
+    } else if (id === "npc_bolivia" && typeof BoliviaScene !== "undefined" && sceneWrapEl && sceneCanvasEl) {
+      sceneWrapEl.classList.remove("hidden");
+      if (typeof IcelandScene !== "undefined") IcelandScene.stop();
+      if (typeof MongoliaScene !== "undefined") MongoliaScene.stop();
+      if (typeof BhutanScene !== "undefined") BhutanScene.stop();
+      if (typeof MadagascarScene !== "undefined") MadagascarScene.stop();
+      if (typeof ParaguayScene !== "undefined") ParaguayScene.stop();
+      if (typeof SloveniaScene !== "undefined") SloveniaScene.stop();
+      if (typeof NamibiaScene !== "undefined") NamibiaScene.stop();
+      if (typeof AlbaniaScene !== "undefined") AlbaniaScene.stop();
+      if (typeof GreenlandScene !== "undefined") GreenlandScene.stop();
+      if (typeof BasilScene !== "undefined") BasilScene.stop();
+      if (typeof GarlicScene !== "undefined") GarlicScene.stop();
+      if (typeof FoodBagScene !== "undefined") FoodBagScene.stop();
+      BoliviaScene.start(sceneCanvasEl);
     } else if (id === "obj_basil" && typeof BasilScene !== "undefined" && sceneWrapEl && sceneCanvasEl) {
       sceneWrapEl.classList.remove("hidden");
       if (typeof IcelandScene !== "undefined") IcelandScene.stop();
@@ -270,6 +315,7 @@ const Dialogues = (function () {
       if (typeof NamibiaScene !== "undefined") NamibiaScene.stop();
       if (typeof AlbaniaScene !== "undefined") AlbaniaScene.stop();
       if (typeof GreenlandScene !== "undefined") GreenlandScene.stop();
+      if (typeof FoodBagScene !== "undefined") FoodBagScene.stop();
       BasilScene.start(sceneCanvasEl);
     } else if (id === "obj_garlic" && typeof GarlicScene !== "undefined" && sceneWrapEl && sceneCanvasEl) {
       sceneWrapEl.classList.remove("hidden");
@@ -283,7 +329,42 @@ const Dialogues = (function () {
       if (typeof AlbaniaScene !== "undefined") AlbaniaScene.stop();
       if (typeof BasilScene !== "undefined") BasilScene.stop();
       if (typeof GreenlandScene !== "undefined") GreenlandScene.stop();
+      if (typeof FoodBagScene !== "undefined") FoodBagScene.stop();
+      if (typeof BoliviaScene !== "undefined") BoliviaScene.stop();
+      if (typeof FriedChickenScene !== "undefined") FriedChickenScene.stop();
       GarlicScene.start(sceneCanvasEl);
+    } else if (id === "obj_food_bag" && typeof FoodBagScene !== "undefined" && sceneWrapEl && sceneCanvasEl) {
+      sceneWrapEl.classList.remove("hidden");
+      if (typeof IcelandScene !== "undefined") IcelandScene.stop();
+      if (typeof MongoliaScene !== "undefined") MongoliaScene.stop();
+      if (typeof BhutanScene !== "undefined") BhutanScene.stop();
+      if (typeof MadagascarScene !== "undefined") MadagascarScene.stop();
+      if (typeof ParaguayScene !== "undefined") ParaguayScene.stop();
+      if (typeof SloveniaScene !== "undefined") SloveniaScene.stop();
+      if (typeof NamibiaScene !== "undefined") NamibiaScene.stop();
+      if (typeof AlbaniaScene !== "undefined") AlbaniaScene.stop();
+      if (typeof GreenlandScene !== "undefined") GreenlandScene.stop();
+      if (typeof BasilScene !== "undefined") BasilScene.stop();
+      if (typeof GarlicScene !== "undefined") GarlicScene.stop();
+      if (typeof BoliviaScene !== "undefined") BoliviaScene.stop();
+      if (typeof FriedChickenScene !== "undefined") FriedChickenScene.stop();
+      FoodBagScene.start(sceneCanvasEl);
+    } else if (id === "stall_buy" && typeof FriedChickenScene !== "undefined" && sceneWrapEl && sceneCanvasEl) {
+      sceneWrapEl.classList.remove("hidden");
+      if (typeof IcelandScene !== "undefined") IcelandScene.stop();
+      if (typeof MongoliaScene !== "undefined") MongoliaScene.stop();
+      if (typeof BhutanScene !== "undefined") BhutanScene.stop();
+      if (typeof MadagascarScene !== "undefined") MadagascarScene.stop();
+      if (typeof ParaguayScene !== "undefined") ParaguayScene.stop();
+      if (typeof SloveniaScene !== "undefined") SloveniaScene.stop();
+      if (typeof NamibiaScene !== "undefined") NamibiaScene.stop();
+      if (typeof AlbaniaScene !== "undefined") AlbaniaScene.stop();
+      if (typeof GreenlandScene !== "undefined") GreenlandScene.stop();
+      if (typeof BasilScene !== "undefined") BasilScene.stop();
+      if (typeof GarlicScene !== "undefined") GarlicScene.stop();
+      if (typeof FoodBagScene !== "undefined") FoodBagScene.stop();
+      if (typeof BoliviaScene !== "undefined") BoliviaScene.stop();
+      FriedChickenScene.start(sceneCanvasEl);
     } else {
       if (typeof IcelandScene !== "undefined") IcelandScene.stop();
       if (typeof MongoliaScene !== "undefined") MongoliaScene.stop();
@@ -296,6 +377,9 @@ const Dialogues = (function () {
       if (typeof BasilScene !== "undefined") BasilScene.stop();
       if (typeof GarlicScene !== "undefined") GarlicScene.stop();
       if (typeof GreenlandScene !== "undefined") GreenlandScene.stop();
+      if (typeof FoodBagScene !== "undefined") FoodBagScene.stop();
+      if (typeof BoliviaScene !== "undefined") BoliviaScene.stop();
+      if (typeof FriedChickenScene !== "undefined") FriedChickenScene.stop();
       if (sceneWrapEl) sceneWrapEl.classList.add("hidden");
     }
   }

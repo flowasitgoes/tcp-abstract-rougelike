@@ -1,5 +1,5 @@
 /**
- * 音效管理：對話「下一句」、「關閉」、遇到路人、左右腳步
+ * 音效管理：對話「下一句」、「關閉」、遇到路人、左右腳步、攤位歡呼與結尾煙火
  * 使用 public/sound/ 下你下載的 Pixabay 音效
  */
 const AudioManager = (function () {
@@ -9,6 +9,9 @@ const AudioManager = (function () {
   let walkLeftAudio = null;
   let walkRightAudio = null;
   let walkRightStopTimer = null;
+  let crowdCheerAudio = null;
+  let fireworkAudio = null;
+  let fireworkStopTimer = null;
 
   function ensureLoaded() {
     if (!nextAudio) {
@@ -33,6 +36,12 @@ const AudioManager = (function () {
     }
     if (!walkRightAudio) {
       walkRightAudio = new Audio("public/sound/walk-right.mp3");
+    }
+    if (!crowdCheerAudio) {
+      crowdCheerAudio = new Audio("public/sound/dennish18-crowd-cheering-143103.mp3");
+    }
+    if (!fireworkAudio) {
+      fireworkAudio = new Audio("public/sound/freesound_community-firework-show-short-64657.mp3");
     }
   }
 
@@ -63,6 +72,20 @@ const AudioManager = (function () {
         walkRightAudio.pause();
         walkRightAudio.currentTime = 0;
       }, 2000);
+    }
+    if (soundId === "stall_cheer" && crowdCheerAudio) {
+      crowdCheerAudio.currentTime = 0;
+      crowdCheerAudio.play().catch(function () {});
+    }
+    if (soundId === "stall_firework" && fireworkAudio) {
+      if (fireworkStopTimer) clearTimeout(fireworkStopTimer);
+      fireworkAudio.currentTime = 0;
+      fireworkAudio.play().catch(function () {});
+      fireworkStopTimer = setTimeout(function () {
+        fireworkStopTimer = null;
+        fireworkAudio.pause();
+        fireworkAudio.currentTime = 0;
+      }, 3000);
     }
   }
 

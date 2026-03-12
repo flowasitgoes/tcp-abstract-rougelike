@@ -22,9 +22,9 @@ const Scene = (function () {
   ];
 
   const OBJECTS = [
-    { x: 1800, y: GROUND_Y - 50, w: 60, h: 50, id: "obj_basil" },
-    { x: 1880, y: GROUND_Y - 45, w: 40, h: 45, id: "obj_garlic" },
-    { x: 1950, y: GROUND_Y - 55, w: 55, h: 55, id: "obj_food_bag" }
+    { x: 800, y: GROUND_Y - 50, w: 60, h: 50, id: "obj_basil" },
+    { x: 1200, y: GROUND_Y - 45, w: 40, h: 45, id: "obj_garlic" },
+    { x: 1840, y: GROUND_Y - 55, w: 55, h: 55, id: "obj_food_bag" }
   ];
 
   const STALL_BOUNDS = { x: 2240, y: GROUND_Y - 140, w: 220, h: 140, id: "stall" };
@@ -54,6 +54,14 @@ const Scene = (function () {
     });
 
     return ids;
+  }
+
+  /** 玩家是否與攤位重疊（走到攤位範圍內） */
+  function isPlayerAtStall(playerX) {
+    const pl = playerX - CONST.PLAYER_WIDTH / 2;
+    const pr = playerX + CONST.PLAYER_WIDTH / 2;
+    const s = STALL_BOUNDS;
+    return pr > s.x && pl < s.x + s.w && PLAYER_BOTTOM > s.y && PLAYER_TOP < s.y + s.h;
   }
 
   function getClickedId(worldX, worldY) {
@@ -142,6 +150,7 @@ const Scene = (function () {
   return {
     getClickedId,
     getNpcsAtPlayer,
+    isPlayerAtStall,
     draw,
     WORLD_WIDTH,
     STALL_BOUNDS,

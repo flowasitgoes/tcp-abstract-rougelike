@@ -58,10 +58,16 @@
       if (hasBought) return;
       const canBuy = talkedIds.size >= CONST.MIN_TALKS_TO_BUY;
       if (canBuy) {
+        if (typeof AudioManager !== "undefined") {
+          try { AudioManager.play("stall_cheer"); } catch (err) {}
+        }
         Dialogues.show("stall_buy", {
           onClose: function () {
             hasBought = true;
             document.getElementById("ending-overlay").classList.remove("hidden");
+            if (typeof AudioManager !== "undefined") {
+              try { AudioManager.play("stall_firework"); } catch (err) {}
+            }
           }
         });
       } else {
@@ -83,16 +89,39 @@
       updateCamera();
 
       var currentNpcs = Scene.getNpcsAtPlayer(Player.getX());
+      if (Scene.isPlayerAtStall(Player.getX())) {
+        currentNpcs.push("stall");
+      }
       for (var i = 0; i < currentNpcs.length; i++) {
         var id = currentNpcs[i];
         if (!lastOverlappingNpcs.has(id)) {
-          talkedIds.add(id);
-          if (typeof AudioManager !== "undefined") {
-            try {
-              AudioManager.play("npc_meet");
-            } catch (err) {}
+          if (id === "stall") {
+            var canBuy = talkedIds.size >= CONST.MIN_TALKS_TO_BUY;
+            if (canBuy) {
+              if (typeof AudioManager !== "undefined") {
+                try { AudioManager.play("stall_cheer"); } catch (err) {}
+              }
+              Dialogues.show("stall_buy", {
+                onClose: function () {
+                  hasBought = true;
+                  document.getElementById("ending-overlay").classList.remove("hidden");
+                  if (typeof AudioManager !== "undefined") {
+                    try { AudioManager.play("stall_firework"); } catch (err) {}
+                  }
+                }
+              });
+            } else {
+              Dialogues.show("stall");
+            }
+          } else {
+            talkedIds.add(id);
+            if (typeof AudioManager !== "undefined") {
+              try {
+                AudioManager.play("npc_meet");
+              } catch (err) {}
+            }
+            Dialogues.show(id);
           }
-          Dialogues.show(id);
           break;
         }
       }
