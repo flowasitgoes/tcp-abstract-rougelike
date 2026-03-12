@@ -4,5 +4,5 @@
 User-agent: *
 Allow: /
 
-# 若有 sitemap，請上線後將下方改為你的完整網址
-Sitemap: https://your-domain.com/sitemap.xml
+# 若有自訂網域，請將下方改為你的完整網址
+Sitemap: https://street-food.ifunlove.com/sitemap.xml

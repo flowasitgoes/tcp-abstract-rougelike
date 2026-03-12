@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <!-- 上線時請將 loc 改為你的網站完整網址 -->
-    <loc>https://your-domain.com/</loc>
-    <lastmod>2025-03-12</lastmod>
+    <!-- 若有自訂網域，請將 loc 改為你的網站完整網址 -->
+    <loc>https://street-food.ifunlove.com/</loc>
+    <lastmod>2025-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
