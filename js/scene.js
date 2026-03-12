@@ -7,27 +7,27 @@ const Scene = (function () {
   const H = CONST.CANVAS_HEIGHT;
   const GROUND_Y = H - 100;
 
-  // 可點擊矩形 { x, y, w, h, id }
+  // 可點擊矩形 { x, y, w, h, id }（旅人間隔 250）
   const NPCS = [
     { x: 320, y: GROUND_Y - 90, w: 50, h: 90, id: "npc_iceland" },
-    { x: 520, y: GROUND_Y - 90, w: 50, h: 90, id: "npc_mongolia" },
-    { x: 720, y: GROUND_Y - 90, w: 50, h: 90, id: "npc_bhutan" },
-    { x: 920, y: GROUND_Y - 90, w: 50, h: 90, id: "npc_madagascar" },
-    { x: 1120, y: GROUND_Y - 90, w: 50, h: 90, id: "npc_paraguay" },
-    { x: 1320, y: GROUND_Y - 90, w: 50, h: 90, id: "npc_slovenia" },
-    { x: 1520, y: GROUND_Y - 90, w: 50, h: 90, id: "npc_namibia" },
-    { x: 1720, y: GROUND_Y - 90, w: 50, h: 90, id: "npc_albania" },
-    { x: 1920, y: GROUND_Y - 90, w: 50, h: 90, id: "npc_greenland" },
-    { x: 2120, y: GROUND_Y - 90, w: 50, h: 90, id: "npc_bolivia" }
+    { x: 570, y: GROUND_Y - 90, w: 50, h: 90, id: "npc_mongolia" },
+    { x: 820, y: GROUND_Y - 90, w: 50, h: 90, id: "npc_bhutan" },
+    { x: 1070, y: GROUND_Y - 90, w: 50, h: 90, id: "npc_madagascar" },
+    { x: 1320, y: GROUND_Y - 90, w: 50, h: 90, id: "npc_paraguay" },
+    { x: 1570, y: GROUND_Y - 90, w: 50, h: 90, id: "npc_slovenia" },
+    { x: 1820, y: GROUND_Y - 90, w: 50, h: 90, id: "npc_namibia" },
+    { x: 2070, y: GROUND_Y - 90, w: 50, h: 90, id: "npc_albania" },
+    { x: 2320, y: GROUND_Y - 90, w: 50, h: 90, id: "npc_greenland" },
+    { x: 2570, y: GROUND_Y - 90, w: 50, h: 90, id: "npc_bolivia" }
   ];
 
   const OBJECTS = [
-    { x: 800, y: GROUND_Y - 50, w: 60, h: 50, id: "obj_basil" },
-    { x: 1200, y: GROUND_Y - 45, w: 40, h: 45, id: "obj_garlic" },
-    { x: 1840, y: GROUND_Y - 55, w: 55, h: 55, id: "obj_food_bag" }
+    { x: 900, y: GROUND_Y - 50, w: 60, h: 50, id: "obj_basil" },
+    { x: 1400, y: GROUND_Y - 45, w: 40, h: 45, id: "obj_garlic" },
+    { x: 2220, y: GROUND_Y - 55, w: 55, h: 55, id: "obj_food_bag" }
   ];
 
-  const STALL_BOUNDS = { x: 2240, y: GROUND_Y - 140, w: 220, h: 140, id: "stall" };
+  const STALL_BOUNDS = { x: 2720, y: GROUND_Y - 140, w: 220, h: 140, id: "stall" };
 
   const allClickables = [...NPCS, ...OBJECTS, STALL_BOUNDS];
 
