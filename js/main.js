@@ -65,6 +65,7 @@
           onClose: function () {
             hasBought = true;
             document.getElementById("ending-overlay").classList.remove("hidden");
+            document.getElementById("ending-overlay").setAttribute("aria-hidden", "false");
             if (typeof AudioManager !== "undefined") {
               try { AudioManager.play("stall_firework"); } catch (err) {}
             }
@@ -105,6 +106,7 @@
                 onClose: function () {
                   hasBought = true;
                   document.getElementById("ending-overlay").classList.remove("hidden");
+            document.getElementById("ending-overlay").setAttribute("aria-hidden", "false");
                   if (typeof AudioManager !== "undefined") {
                     try { AudioManager.play("stall_firework"); } catch (err) {}
                   }
@@ -198,13 +200,52 @@
     }
   }
 
+  function applyUI() {
+    const ui = typeof Lang !== "undefined" && Lang.getUI ? Lang.getUI() : null;
+    if (!ui) return;
+    const el = function (id) { return document.getElementById(id); };
+    const set = function (id, key) {
+      const e = el(id);
+      if (e && ui[key] != null) e.textContent = ui[key];
+    };
+    const setAria = function (id, key) {
+      const e = el(id);
+      if (e && ui[key] != null) e.setAttribute("aria-label", ui[key]);
+    };
+    document.querySelectorAll("[data-i18n]").forEach(function (node) {
+      const key = node.getAttribute("data-i18n");
+      if (key && ui[key] != null) node.textContent = ui[key];
+    });
+    document.querySelectorAll("[data-i18n-aria-label]").forEach(function (node) {
+      const key = node.getAttribute("data-i18n-aria-label");
+      if (key && ui[key] != null) node.setAttribute("aria-label", ui[key]);
+    });
+    const langBtn = el("lang-switch");
+    if (langBtn && ui.langButton != null) langBtn.textContent = ui.langButton;
+    document.documentElement.lang = Lang.getLang() === "en" ? "en" : "zh-TW";
+    document.title = Lang.getLang() === "en" ? "Night Market Fried Chicken" : "夜市鹹酥雞 · Night Market Fried Chicken";
+  }
+
   function init() {
     resize();
     window.addEventListener("resize", resize);
     ctx = canvas.getContext("2d");
     Dialogues.init();
+    applyUI();
+    var langSwitch = document.getElementById("lang-switch");
+    if (langSwitch) {
+      langSwitch.addEventListener("click", function () {
+        var next = Lang.getLang() === "zh" ? "en" : "zh";
+        Lang.setLang(next);
+        applyUI();
+      });
+    }
+    window.onLangChange = function () {
+      applyUI();
+    };
     document.getElementById("ending-replay").addEventListener("click", function () {
       document.getElementById("ending-overlay").classList.add("hidden");
+      document.getElementById("ending-overlay").setAttribute("aria-hidden", "true");
       hasBought = false;
       talkedIds.clear();
       Player.reset();
@@ -216,8 +257,18 @@
   }
 
   if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", init);
+    document.addEventListener("DOMContentLoaded", runWhenReady);
   } else {
-    init();
+    runWhenReady();
+  }
+
+  function runWhenReady() {
+    if (typeof Lang !== "undefined" && Lang.isReady && Lang.isReady()) {
+      init();
+      return;
+    }
+    document.addEventListener("translationsReady", function () {
+      init();
+    });
   }
 })();

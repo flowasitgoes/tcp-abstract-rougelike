@@ -22,9 +22,9 @@ const Scene = (function () {
   ];
 
   const OBJECTS = [
-    { x: 900, y: GROUND_Y - 50, w: 60, h: 50, id: "obj_basil" },
-    { x: 1400, y: GROUND_Y - 45, w: 40, h: 45, id: "obj_garlic" },
-    { x: 2220, y: GROUND_Y - 55, w: 55, h: 55, id: "obj_food_bag" }
+    { x: 970, y: GROUND_Y - 50, w: 60, h: 50, id: "obj_basil" },
+    { x: 1470, y: GROUND_Y - 45, w: 40, h: 45, id: "obj_garlic" },
+    { x: 2240, y: GROUND_Y - 55, w: 55, h: 55, id: "obj_food_bag" }
   ];
 
   const STALL_BOUNDS = { x: 2720, y: GROUND_Y - 140, w: 220, h: 140, id: "stall" };

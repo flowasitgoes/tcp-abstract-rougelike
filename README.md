@@ -62,4 +62,13 @@
 ```
 
 本地可直接用瀏覽器開啟 `index.html`，或使用任意靜態伺服器（例如 `npx serve .`）執行。
+
+## SEO 設定（上線前必做）
+
+專案已內建完整 SEO：meta、Open Graph、Twitter Card、JSON-LD、`robots.txt`、`sitemap.xml`。**上線後請將以下檔案中的 `https://your-domain.com` 改為你的實際網址**，否則分享與搜尋預覽會不正確：
+
+- **index.html**：`<link rel="canonical">`、`og:image`、`og:url`、`twitter:image`、JSON-LD 的 `url`
+- **robots.txt**：`Sitemap:` 網址
+- **sitemap.xml**：`<loc>` 網址
+
 # tcp-abstract-rougelike

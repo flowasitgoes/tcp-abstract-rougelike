@@ -1,0 +1,8 @@
+# 夜市鹹酥雞小遊戲 - 搜尋引擎爬蟲規則
+# https://developers.google.com/search/docs/crawling-indexing/robots/intro
+
+User-agent: *
+Allow: /
+
+# 若有 sitemap，請上線後將下方改為你的完整網址
+Sitemap: https://your-domain.com/sitemap.xml
