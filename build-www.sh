@@ -17,5 +17,10 @@ cp "$ROOT/public/translations.json" "$OUT/public/"
 cp "$ROOT/public/sound/"*.mp3 "$OUT/public/sound/" 2>/dev/null || true
 cp "$ROOT/public/thumbnail-icons/"*.jpg "$OUT/public/thumbnail-icons/" 2>/dev/null || true
 
+# itch.io HTML game 常部署在子路徑，將站內資源改為相對路徑避免 404
+# 只轉換 src/href 開頭為 "/" 的本地資源，不影響 https:// 等完整網址
+sed -i '' 's|href="/|href="|g' "$OUT/index.html"
+sed -i '' 's|src="/|src="|g' "$OUT/index.html"
+
 echo "Done. www contents:"
 find "$OUT" -type f | sort
